@@ -5,8 +5,10 @@ import {
     MaterialCommunityIcons,
     FontAwesome5,
     Ionicons,
+    MaterialIcons,
 } from '@expo/vector-icons';
 import car from '../assets/images/car.png'
+import menuOptions from '../assets/menuOptions';
 
 export default function Page() {
   return (
@@ -24,6 +26,16 @@ export default function Page() {
             <MaterialCommunityIcons name="fan" size={26} color="gray" />
             <FontAwesome5 name="bolt" size={26} color="gray" />
             <Ionicons name="car-sport-sharp" size={26} color="gray" />
+        </View>
+        <View style={styles.optionRow}>
+            <MaterialCommunityIcons name="car" size={26} color="gray" />
+            <Text style={styles.optionText}>Controls</Text>
+            <MaterialIcons
+                name="keyboard-arrow-right"
+                size={24}
+                color="gray"
+                style={{ marginLeft: 'auto' }}
+            />
         </View>
     </View>
   );
@@ -57,5 +69,16 @@ const styles = StyleSheet.create({
     controls: {
         flexDirection: 'row',
         justifyContent: 'space-around',
+    },
+    optionRow: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginVertical: 20
+    },
+    optionText: {
+        color: '#eee',
+        fontSize: 18,
+        fontWeight: 'bold',
+        marginLeft: 10,
     },
 });

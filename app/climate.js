@@ -3,7 +3,7 @@ import climateImage from '../assets/images/climate.png';
 import { MaterialCommunityIcons, Entypo } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 
-export const ClimateScreen = () => {
+const ClimateScreen = () => {
     const router = useRouter();
 
     return (
@@ -93,3 +93,5 @@ const styles = StyleSheet.create({
         marginTop: 10,
     },
 });
+
+export default ClimateScreen;

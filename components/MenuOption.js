@@ -3,9 +3,10 @@ import {
     MaterialCommunityIcons,
     MaterialIcons,
 } from '@expo/vector-icons';
-import {Link} from "expo-router";
+import {Link, useRouter} from "expo-router";
 
-export const MenuOption = ({item}) => {
+const MenuOption = ({item}) => {
+
     return (
         <Link href={item.href} asChild>
             <Pressable style={styles.optionRow}>
@@ -35,3 +36,5 @@ const styles= StyleSheet.create({
         marginLeft: 10,
     },
 })
+
+export default MenuOption
